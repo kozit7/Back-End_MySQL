@@ -1,0 +1,90 @@
+문서
+
+아래한글
+ms-word
+
+DBMS
+Oracle	-----	
+Mysql	     |----- SQL
+MsSql	-----
+........
+
+Mysql 
+
+설치하기 전에 살펴봐야 할 것.
+컴퓨터 이름이 한글로되어있으면 안된다.
+
+다운로드
+
+구글 mysql 검색 -> download -> 밑에 mysql community downloads ->mysql community server
+-> go to download page -> 2개중 밑에꺼
+
+데이터베이스의 정의
+
+데이터베이스는 특정 조직의 업무를 수행하는 데 필요한 상호 관련된 데이터들의 모임이다.
+
+1. 통합된 데이터(Integrated Data):자료의 중복을 배제한 데이터의 모임이다.
+			      여러 부서에서 사용하는 데이터를 한 곳에 모아서 공동으로 관리하는 것
+2. 저장된 데이터(Stored Data):컴퓨터가 접근할 수 있는 저장 매체에 저장된 자료이다.
+			 클라이언트가 쉽게 접근할 수 있게 저장된 데이터
+3. 운영 데이터(Operational Data):조직의 고유한 업무를 수행하는 데 존재 가치가 확실하고 없어서는 안 될 반드시 필요한 자료이다.
+			     조직의 운영에 기본적으로 반드시 필요한 데이터 저장
+4. 공용 데이터(Shared Data): 여러 응용 시스템들이 공동으로 소유하고 유지하는 자료이다.  
+		 	한 조직의 여러 응용 프로그램이 공동으로 사용하는 것. 
+
+데이터베이스의 특징
+
+1. 실시간 접근성(Real-Time Accessibility) 
+수시적이고 비정형적인 질의(조희)에 대하여 실시간 처리에 의한 응답이 가능해야 한다.
+
+2. 계속적인 변화(Continuous Evolution) 
+데이터 베이스의 상태는 동적이다. 즉 새로운 데이터의 삽입(Insert), 삭제(Delete), 갱신(Update)로 항상 최신의 데이터를 유지한다.
+
+3. 동시 공용(Concurrent Sharing) 
+데이터베이스는 서로 다른 목적을 가진 여러 응용자들을 위한 것이므로 다수의 사용자가 동시에 같은 내용의 데이터를 이용할 수 있어야 한다.
+
+4. 내용에 의한 참조(Content Reference) 
+데이터베이스에 있는 데이터를 참조할 때 데이터 레코드의 주소나 위치에 의해서가 아니라, 사용자가 요구하는 데이터 내용으로 데이터를 찾는다.
+
+
+SQL(Structured Query Language) 기본구문
+CREATE , DROP , INSERT , SELECT , UPDATE , DELETE
+
+DDL : Data Definition Language
+명령어 : CREATE - database, table
+ALTER  DROP  RENAME  TRUNCATE
+테이블과 같은 데이터 구조를 정의하는데 사용되는 명령어들로 (생성, 변경, 삭제, 이름변경)데이터 구조와 관련된 명령어들을 말함.
+
+DML : Data Manipulation Language
+명령어 : SELECT - 데이터 조회, 검색
+데이터 베이스에 들어 있는 데이터를 조회하거나 검색하기 위한 명령어를 말하는 것으로 RETRIEVE 라고도 함.
+명령어 : INSERT - 데이터 추가
+           UPDATE - 데이터 수정
+           DELETE - 데이더 삭제
+데이터베이스의 테이블에 들어 있는 데이터에 변형을 가하는 종류(데이터 삽입, 수정, 삭제)의 명령어들을 말함.
+
+DCL : Data Control Language
+명령어 : GRANT , REVOKE 
+데이터베이스에 접근하고 객체들을 사용하도록 권한을 주고 회수하는 명령어들을 말함.
+
+
+
+SQL의 제약조건   NULL = 빈칸을 허용하지 않는다.
+		
+NOT NULL 중복(O) NULL(X)
+'필수 입력 사항'을 의미
+
+UNIQUE 중복(X) NULL(O)
+중복성 배제 즉,'유일한 값'으로 존재해야 함을 의미
+
+PRIMARY KEY(기본키) 중복(X) NULL(X)
+NOT NULL + UNIQUE로, '테이블에서 대표되는 컬럼'을 의미
+
+FOREIGN KEY(외래키) 
+'참조하는 테이블에서 존재하는 값만 사용 가능'을 의미
+
+CHECK
+'주어진 조건에 해당하는 값만 입력 가능'을 의미
+
+중복(O) NULL(O)
+제약조건을 안주면 됨.
