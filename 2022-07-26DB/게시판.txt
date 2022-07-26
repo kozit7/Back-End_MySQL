@@ -1,0 +1,32 @@
+jsp 내장 객체(9가지)
+
+자주쓰이는 4가지
+request - 요청
+response - 응답
+session - 로그인 할 때 
+out - 응답 페이지 전송을 위한 출력 stream
+
+
+
+게시판 CRUD작업
+
+C - Create(insert) - 게시판 글쓰기
+R - Read(select) - 게시판 목록 리스트, 게시판 상세내용 페이지
+U - Update - 게시판 수정
+D - Delete - 게시판 삭제
+
+
+게시판 글쓰기
+member.jsp, memberServer.jsp 참고
+
+게시판 목록리스트
+memberList.jsp 참고
+
+게시판 상세내용페이지
+memberList.jsp 참고
+
+게시판 글수정
+member.jsp, memberServer.jsp 참고
+
+게시판 글삭제
+member.jsp, memberServer.jsp참고
